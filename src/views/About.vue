@@ -2,9 +2,9 @@
   <div class="about">
     <img alt="under construction" src="@/assets/work.png" width="36px" height="36px" />
     <div class="icp">
-      <span class="construction" id="title1">阿里雲</span>
+      <span class="construction" id="title-pink">阿里雲</span>
       <span class="construction">這就是老子的備案頁面</span>
-      <span class="construction" id="title1"> Mic Drop!</span>
+      <span class="construction" id="title-pink"> Mic Drop!</span>
     </div>
   </div>
 </template>

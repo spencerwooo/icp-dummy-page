@@ -2,13 +2,13 @@
   <div id="app">
     <div id="top-box" class="fade-in-fwd">
       <div id="nav" class="text-focus-in">
-        <span id="title1" class="header">信息高速公路</span>
-        <span id="title2" class="header">暢通無阻全球資訊網</span>
-        <span id="title3" class="header">萬物互聯</span>
-        <span id="title4" class="header">因特網内容提供服務中國互聯網</span>
-        <span id="title5" class="header">服務供應</span>
-        <span id="title6" class="header">贊大佬</span>
-        <span id="title7" class="header">實在太强了</span>
+        <span class="header title-pink">信息高速公路</span>
+        <span class="header">暢通無阻全球資訊網</span>
+        <span class="header">萬物互聯</span>
+        <span class="header title-yellow">因特網内容提供服務中國互聯網</span>
+        <span class="header">服務供應</span>
+        <span class="header title-orange">贊大佬</span>
+        <span class="header">實在太强了</span>
 
         <div id="router-links">
           <router-link to="/">主頁</router-link> |
@@ -17,10 +17,29 @@
       </div>
     </div>
     <div id="bottom-box">
-      <router-view />
+      <transition :name="slider" mode="out-in">
+        <router-view />
+      </transition>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      slider: ''
+    }
+  },
+  watch: {
+    '$route' (to, from) {
+      const toDepth = to.path.split('/').filter(n => n).length
+      const fromDepth = from.path.split('/').filter(n => n).length
+      this.slider = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+    }
+  }
+}
+</script>
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
@@ -76,15 +95,15 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 
-#title1 {
+.title-pink {
   color: #eab0d9;
 }
 
-#title4 {
+.title-yellow {
   color: #eae7af;
 }
 
-#title6 {
+.title-orange {
   color: #d65a31;
 }
 
@@ -108,6 +127,28 @@ body {
   -webkit-animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
     both;
   animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition-duration: 0.5s;
+  transition-property: height, opacity, transform;
+  transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  overflow: hidden;
+}
+
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate(2em, 0);
+}
+
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  transform: translate(-2em, 0);
 }
 
 /* ----------------------------------------------
