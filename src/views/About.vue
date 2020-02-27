@@ -20,13 +20,13 @@ export default {
 
 <style scoped>
 .about {
+  height: 20vh;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: start;
-  align-items: stretch;
+  justify-content: flex-start;
+  align-items: center;
   align-content: stretch;
-  padding: 50px 0;
 }
 
 h1 {

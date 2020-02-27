@@ -4,7 +4,8 @@
     <div class="icp">
       <span class="construction" id="title1">是的是的是的我正在被開發</span>
       <span class="construction">這你難道看不出來嗎那你是真的很機車耶</span>
-      <span class="construction" id="title1">來看看我閃亮亮的
+      <span class="construction" id="title1">
+        來看看我閃亮亮的
         <a href="http://www.beian.miit.gov.cn">京 ICP 備 17065315</a>
       </span>
     </div>
@@ -22,13 +23,13 @@ export default {
 
 <style scoped>
 .home {
+  height: 20vh;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: start;
-  align-items: stretch;
+  justify-content: flex-start;
+  align-items: center;
   align-content: stretch;
-  padding: 50px 0;
 }
 
 h1 {

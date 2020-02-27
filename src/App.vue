@@ -41,14 +41,21 @@ body {
 }
 
 #top-box {
-  width: 100%;
+  height: 80vh;
   background: #154165;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 #nav {
-  max-width: 900px;
   margin: 0px auto;
-  padding: 100px 10px;
+  max-width: 900px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #nav a {
@@ -87,6 +94,7 @@ body {
 #bottom-box {
   max-width: 900px;
   margin: 0px auto;
-  padding: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 </style>
