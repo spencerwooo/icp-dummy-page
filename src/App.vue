@@ -74,8 +74,8 @@ body {
 #nav {
   margin: 0px auto;
   max-width: 900px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #nav a {
@@ -93,6 +93,21 @@ body {
   font-weight: bold;
   font-size: 3.7rem;
   color: rgba(255, 255, 255, 0.5);
+}
+
+@media only screen and (max-width: 700px) {
+  #top-box {
+    height: 85vh;
+  }
+  .header {
+    font-size: 2.6rem;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1000px) {
+  #top-box {
+    height: 88vh;
+  }
 }
 
 .title-pink {
@@ -114,8 +129,8 @@ body {
 #bottom-box {
   max-width: 900px;
   margin: 0px auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .fade-in-fwd {

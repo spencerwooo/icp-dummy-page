@@ -43,4 +43,20 @@ h1 {
   color: #eae7af;
   font-weight: bold;
 }
+
+@media only screen and (max-width: 700px) {
+  .about {
+    height: 15vh;
+  }
+
+  .icp {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1000px) {
+  .about {
+    height: 12vh;
+  }
+}
 </style>
