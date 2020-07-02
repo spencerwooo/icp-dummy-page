@@ -6,7 +6,7 @@
       <span class="construction">我正在被開發</span>
       <span class="construction" id="title-pink">
         來看看我閃亮亮的
-        <a href="http://www.beian.miit.gov.cn">京 ICP 備 17065315</a>
+        <a href="http://www.beian.miit.gov.cn">京 ICP 備 {{ icp }}</a>
       </span>
     </div>
   </div>
@@ -17,7 +17,15 @@
 
 export default {
   name: 'Home',
-  components: {}
+  components: {},
+  data () {
+    return {
+      icp: process.env.VUE_APP_ICP ? process.env.VUE_APP_ICP : ''
+    }
+  },
+  mounted () {
+    console.log('ICP:', process.env.VUE_APP_ICP)
+  }
 }
 </script>
 
