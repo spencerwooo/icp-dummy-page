@@ -22,7 +22,9 @@ You can deploy static web pages via docker or directly to Nginx's web root.
 
 ### Docker
 
-🚧 [WIP]
+```bash
+docker build --build-arg "ICP=京ICP备xxxxxx" -t dummpy-page .
+```
 
 ### Direct deployment
 

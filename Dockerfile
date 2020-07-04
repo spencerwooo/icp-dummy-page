@@ -5,6 +5,8 @@ COPY package.json ./
 COPY yarn.lock ./
 RUN yarn install
 COPY . .
+ARG ICP
+RUN echo "VUE_APP_ICP=$ICP" > .env.local
 RUN yarn build
 
 # Production stage
