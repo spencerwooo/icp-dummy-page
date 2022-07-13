@@ -6,7 +6,7 @@
       <span class="construction">我正在被開發</span>
       <span class="construction" id="title-pink">
         來看看我閃亮亮的
-        <a href="http://www.beian.miit.gov.cn">{{ icp }}</a>
+        <a href="https://beian.miit.gov.cn/">{{ icp }}</a>
       </span>
     </div>
   </div>
